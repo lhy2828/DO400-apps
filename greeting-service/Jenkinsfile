@@ -5,7 +5,7 @@ pipeline{
             steps{
                 sh '''
                     oc project deploy-strategies
-                    oc start-build greeting-service --follow -wait
+                    oc start-build greeting-service --follow --wait
                 '''
             }
         }
