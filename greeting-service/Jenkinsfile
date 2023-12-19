@@ -1,11 +1,12 @@
 pipeline{
     agent any
     stages{
-        stage("Deploy){
+        stage('Deploy'){
             steps{
                 sh '''
                     oc project deploy-strategies
                     oc start-build greeting-service --follow -wait
+                '''
             }
         }
     }
